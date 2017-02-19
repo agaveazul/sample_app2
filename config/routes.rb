@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  get 'users/new'
 
-  get 'static_pages/help'
+  get '/help', to: 'static_pages#help' #, as: 'helf' to change the default directory
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
 
-  get 'static_pages/about'
-
-  get 'static_pages/contact'
+  get '/signup', to: 'users#new'
 
   root 'static_pages#home'
 
